@@ -270,6 +270,7 @@ a{color:var(--orange);text-decoration:none}
 .footer-note{max-width:420px;margin:26px 0 28px;color:#e2e3e6;font-size:1.05rem;line-height:1.55}
 .footer-line{height:1px;background:linear-gradient(90deg,var(--orange),rgba(255,103,0,0));margin-bottom:16px}
 .footer-fine{color:#7c8088;font-size:.78rem;margin:0;letter-spacing:.04em}
+.footer-legal{color:#666b75;font-size:.76rem;margin:14px 0 0;line-height:1.6}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
