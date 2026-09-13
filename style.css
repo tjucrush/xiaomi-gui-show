@@ -478,3 +478,18 @@ a{color:var(--orange);text-decoration:none}
   100%{opacity:0;transform:translate3d(36px,380px) rotate(160deg)}
 }
 @keyframes hero-scan{0%,100%{transform:scaleX(.35);opacity:.15}50%{transform:scaleX(1);opacity:.75}}
+.hero-particle--strong{
+  width:7px;height:7px;opacity:0;border-radius:2px;
+  box-shadow:0 0 20px rgba(255,103,0,.8),0 0 4px rgba(255,255,255,.8);
+  animation:particle-drift-strong 6s linear infinite;
+}
+.hero-particle--strong::after{
+  content:"";position:absolute;left:50%;top:100%;width:1px;height:24px;
+  background:linear-gradient(var(--orange),transparent);transform:translateX(-50%);opacity:.55;
+}
+@keyframes particle-drift-strong{
+  0%{opacity:0;transform:translate3d(0,-32px) rotate(0deg)}
+  14%{opacity:.82}
+  76%{opacity:.42}
+  100%{opacity:0;transform:translate3d(-28px,460px) rotate(90deg)}
+}

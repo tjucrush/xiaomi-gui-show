@@ -77,6 +77,15 @@ document.querySelectorAll('#navlinks a').forEach(a=>{
       particle.style.animationDuration = `${6 + (i % 4)}s`;
       heroParticles.appendChild(particle);
     }
+    for(let i=0;i<12;i++){
+      const particle = document.createElement('span');
+      particle.className = 'hero-particle hero-particle--strong';
+      particle.style.left = `${4 + ((i * 53) % 92)}%`;
+      particle.style.top = `${4 + ((i * 31) % 30)}%`;
+      particle.style.animationDelay = `${(i % 6) * -0.7}s`;
+      particle.style.animationDuration = `${5.5 + (i % 3)}s`;
+      heroParticles.appendChild(particle);
+    }
   }
 
   const navSectionLinks = Array.from(document.querySelectorAll('#navlinks a[href^="#"]'));
