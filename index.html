@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xiaomi-GUI-Show: Interactive Showcase</title>
+<meta name="description" content="Xiaomi-GUI-Show is an interactive local showcase for interface automation demos and evaluation views.">
+<link rel="icon" type="image/png" href="assets/logo/xiaomi_logo.png?v=3">
+<link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">
+      <img src="assets/logo/xiaomi_logo.png?v=3" alt="Xiaomi logo">
+      <span>Xiaomi-GUI-Show</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="navlinks">
+      <a href="#overview">Overview</a>
+      <a href="#demos">Demos</a>
+      <a href="#cases">Cases</a>
+      <a href="#method">Approach</a>
+      <a href="#benchmark">Benchmark</a>
+      <a href="#results">Results</a>
+
+    </div>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="hero-glow"></div>
+  <div class="container hero-inner">
+    <h1 class="hero-title">Xiaomi-GUI-Show</h1>
+    <p class="hero-sub">An <strong>interactive interface automation showcase</strong> with
+      local demos, evaluation views, and workflow studies.</p>
+
+
+    <div class="btn-row">
+      <a class="btn btn-dark" href="#demos">Watch Demos</a>
+      <a class="btn btn-benchmark" href="#results">Explore Results</a>
+    </div>
+
+
+  </div>
+</header>
+
+<section id="overview" class="section">
+  <div class="container narrow">
+    <h2 class="section-title">Overview</h2>
+    <p class="lead">
+      Reliable interface automation must handle changing states, interruptions, and multi-step
+      workflows. Xiaomi-GUI-Show presents a local collection of demonstrations, evaluation views,
+      and recovery patterns for interactive automation.
+    </p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-head"><span class="pillar-ico">📱</span>
+          <h3>Execution Infrastructure</h3></div>
+        <p>Structured environments support repeatable collection, execution, evaluation, and
+          review across interactive workflows.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-head"><span class="pillar-ico">🔁</span>
+          <h3>Error-Driven Improvement</h3></div>
+        <p>Failure paths become corrected actions, reflective notes, and recovery demonstrations
+          for abnormal-state recognition and self-correction.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-head"><span class="pillar-ico">🎯</span>
+          <h3>Progressive Training</h3></div>
+        <p>Basic operation leads to local correction, then long-horizon planning and recovery.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-head"><span class="pillar-ico">🧪</span>
+          <h3>Task Evaluation</h3></div>
+        <p>A curated task set uses fine-grained sub-goals and includes workflows that span multiple
+          interfaces.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="demos" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Demos</h2>
+
+    <div class="demo-carousel">
+      <div class="demo-viewport">
+        <div class="demo-list">
+          <figure class="demo-slide">
+            <div class="demo-video">
+              <video controls preload="metadata" playsinline>
+                <source src="assets/videos/demo1.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <figcaption class="demo-cap">
+              <span class="demo-badge">Task 1 · Cross-App Information Relay</span>
+              <span class="demo-app">Application A → Application B → Application C → Application D</span>
+              <p class="demo-query">“在多个应用之间传递信息，完成查询、确认、记录和后续操作。”</p>
+              <p class="demo-query-en">“Pass information across several applications and complete a sequence of lookup, confirmation, and follow-up actions.”</p>
+            </figcaption>
+          </figure>
+
+          <figure class="demo-slide">
+            <div class="demo-video">
+              <video controls preload="metadata" playsinline>
+                <source src="assets/videos/demo2.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <figcaption class="demo-cap">
+              <span class="demo-badge">Task 2 · Cross-Application Image Search</span>
+              <span class="demo-app">Application A → Application B</span>
+              <p class="demo-query">“在一个应用中查找并保存内容，再使用保存的内容在另一个应用中完成匹配操作。”</p>
+              <p class="demo-query-en">“Find and save content in one application, then use it in another application to complete a matching task.”</p>
+            </figcaption>
+          </figure>
+
+          <figure class="demo-slide">
+            <div class="demo-video">
+              <video controls preload="metadata" playsinline>
+                <source src="assets/videos/demo3.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <figcaption class="demo-cap">
+              <span class="demo-badge">Task 3 · Multi-Application Planning</span>
+              <span class="demo-app">Application A → Application B</span>
+              <p class="demo-query">“在一个应用中查询时间信息，再在另一个应用中查询路线，最后整理成一份行动计划。”</p>
+              <p class="demo-query-en">“Check timing information in one application, look up a route in another, and summarize the result as an action plan.”</p>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cases" class="section">
+  <div class="container">
+    <h2 class="section-title">Case Studies</h2>
+    <p class="section-intro">
+      Two real-device trajectories: end-to-end execution and mid-trajectory recovery.
+    </p>
+
+    <div class="case-grid">
+      <figure class="case-card">
+        <button class="case-img" data-zoom="assets/figs/case1.png" aria-label="Enlarge case 1">
+          <img src="assets/figs/case1.png" alt="Complete real-device execution trajectory" loading="lazy">
+        </button>
+        <figcaption>
+          <span class="case-badge">Case 1 · End-to-end execution</span>
+          <p>The agent observes the screen, decomposes the task into sub-goals, and emits a sequence
+            of GUI actions until the goal is reached.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="case-card">
+        <button class="case-img" data-zoom="assets/figs/case2.png" aria-label="Enlarge case 2">
+          <img src="assets/figs/case2.png" alt="Reflection and plan revision trajectory" loading="lazy">
+        </button>
+        <figcaption>
+          <span class="case-badge">Case 2 · Reflection &amp; recovery</span>
+          <p>When the observed state deviates from the expected outcome, the agent records the
+            discrepancy, revises its plan, and selects a corrective action rather than continuing
+            the original trajectory.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="results" class="section">
+  <div class="container">
+    <h2 class="section-title">Results</h2>
+    <p class="section-intro">
+      Across the evaluation set, Xiaomi-GUI-Show provides a compact view of completion rates,
+      progress, and comparative baselines.
+    </p>
+
+    <div class="card">
+      <h3 class="card-title">Benchmark: Success Rate (%)</h3>
+      <div class="bars" id="bars-primary"></div>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Secondary Set: Success Rate (%)</h3>
+      <div class="bars" id="bars-secondary"></div>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Navigation Results</h3>
+      <p class="card-note">Success denotes the fraction of fully completed tasks; Progress denotes
+        the mean fraction of completed sub-goals per task.</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Primary<br>Success</th>
+              <th>Primary<br>Progress</th>
+              <th>Secondary Set</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="group"><td colspan="4">Proprietary Models</td></tr>
+            <tr><td>OpenAI CUA (o3)</td><td>—</td><td>—</td><td>52.5%</td></tr>
+            <tr><td>Gemini 3.1 Pro</td><td>85.0%</td><td>89.6%</td><td>—</td></tr>
+            <tr><td>Gemini 3.1 Flash</td><td>58.0%</td><td>72.4%</td><td>—</td></tr>
+            <tr><td>Claude Opus 4.7</td><td>60.0%</td><td>74.8%</td><td>—</td></tr>
+            <tr><td>Claude Opus 4.6</td><td>33.0%</td><td>56.7%</td><td>—</td></tr>
+            <tr><td>Seed 2.0 Pro</td><td>80.0%</td><td>88.1%</td><td>—</td></tr>
+            <tr><td>Seed 1.8</td><td>65.0%</td><td>82.4%</td><td>70.7%</td></tr>
+            <tr><td>UI-TARS-2</td><td>—</td><td>—</td><td>73.3%</td></tr>
+            <tr><td>UI-TARS-1.5</td><td>24.0%</td><td>40.5%</td><td>64.2%</td></tr>
+            <tr class="group"><td colspan="4">Open-source Models</td></tr>
+            <tr><td>UI-Venus-1.5-8B</td><td>16.0%</td><td>41.6%</td><td>73.7%</td></tr>
+            <tr><td>UI-Venus-1.5-30B-A3B</td><td>21.0%</td><td>44.6%</td><td>77.6%</td></tr>
+            <tr><td>GUI-Owl-1.5-8B-Instruct</td><td>25.0%</td><td>44.0%</td><td>69.0%</td></tr>
+            <tr><td>GUI-Owl-1.5-8B-Thinking</td><td>26.0%</td><td>39.0%</td><td>71.6%</td></tr>
+            <tr><td>GUI-Owl-1.5-32B-Instruct</td><td>22.0%</td><td>40.6%</td><td>69.8%</td></tr>
+            <tr><td>GUI-Owl-1.5-32B-Thinking</td><td>31.0%</td><td>51.7%</td><td>69.8%</td></tr>
+            <tr><td>Step-GUI-8B</td><td>15.0%</td><td>32.8%</td><td>67.7%</td></tr>
+            <tr><td>MAI-UI-8B</td><td>33.0%</td><td>50.8%</td><td>70.7%</td></tr>
+            <tr class="group ours"><td colspan="4">Featured System</td></tr>
+            <tr class="ours-row">
+              <td><b>Xiaomi-GUI-Show</b></td>
+              <td><b>72.0%</b></td><td><b>85.8%</b></td><td><b>78.9%</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="benchmark" class="section">
+  <div class="container">
+    <h2 class="section-title">Benchmark</h2>
+    <p class="section-intro">
+      The evaluation set is designed for reproducible review of interface actions. Each task is
+      scored through fine-grained sub-goals that award partial credit, and many tasks span
+      multiple interfaces.
+    </p>
+
+    <div class="figure-grid two">
+      <figure class="figure">
+        <img src="assets/figs/app_freq_pie.png" alt="Interface frequency in the evaluation set">
+        <figcaption>Interface frequency across the task set.</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="assets/figs/multiapp_bar.png" alt="Applications per task">
+        <figcaption>Number of applications per task.</figcaption>
+      </figure>
+    </div>
+
+    <div class="domain-grid">
+      <div class="domain-card">
+        <span class="domain-count">10 tasks</span>
+        <h3>Foundation</h3>
+        <p>Basic GUI operations: clicking, scrolling, inputting, and navigating across interfaces.</p>
+      </div>
+      <div class="domain-card">
+        <span class="domain-count">16 tasks</span>
+        <h3>Safety &amp; Reflection</h3>
+        <p>Refusing unsafe or irreversible operations, and recognizing infeasible goals to stop or
+          skip.</p>
+      </div>
+      <div class="domain-card">
+        <span class="domain-count">33 tasks</span>
+        <h3>Memory &amp; Knowledge</h3>
+        <p>Retaining information across steps and applying external knowledge to complete tasks.</p>
+      </div>
+      <div class="domain-card">
+        <span class="domain-count">41 tasks</span>
+        <h3>Reasoning &amp; Planning</h3>
+        <p>Long-horizon planning, multi-source aggregation, and adaptive decision-making.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="method" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Approach</h2>
+
+    <div class="method-block">
+      <h3 class="method-h">Real-Device-Dominant Hybrid Infrastructure</h3>
+      <p>Physical devices serve as the primary execution environment with sandboxes as auxiliary
+        support, organized into a resource layer, a scheduling layer, and an execution &amp;
+        collection layer. A <b>Device-Pull</b> scheduler lets idle devices request tasks matching
+        their current readiness, avoiding assignments to devices that become ineligible.</p>
+      <figure class="figure wide">
+        <img src="assets/figs/infra.png" alt="Hybrid infrastructure overview">
+        <figcaption>Hundreds of physical phones and dozens of tablets form the primary execution
+          substrate, complemented by hundreds of sandbox instances.</figcaption>
+      </figure>
+    </div>
+
+    <div class="method-block">
+      <h3 class="method-h">Multi-Source Training Data</h3>
+      <p>Three progressive data tiers span the supervision needed for real mobile scenarios:
+        <b>high-frequency task data</b> for head functions and abnormal states,
+        <b>high-generalization data</b> for long-tail intents via function trees and behavior
+        buckets, and <b>agent-capability enhancement data</b> with a five-field structured
+        chain-of-thought schema (Observation, Reflection, Plan, Decision, Memory).</p>
+      <div class="figure-grid two">
+        <figure class="figure">
+          <img src="assets/figs/data.png" alt="High-generalization data pipeline">
+          <figcaption>High-generalization data construction: function trees, behavior-bucket query
+            synthesis, rollout, and two-level cleaning.</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="assets/figs/query.png" alt="Query synthesis pipeline">
+          <figcaption>Query synthesis across single- and cross-application task types, with
+            quality filtering and function-point back-tagging.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="method-block">
+      <h3 class="method-h">Error-Driven Data Flywheel</h3>
+      <p>Rather than scaling data volume, the flywheel is organized around the error distribution
+        exposed during real rollouts. <b>Interactive annotation</b> locates the first key error and
+        records the corrected action and reason; <b>teacher-model scoring &amp; takeover</b>
+        detects off-path behavior at scale and demonstrates recovery to a workable path.</p>
+      <figure class="figure wide">
+        <img src="assets/figs/flywheel.png" alt="Teacher scoring and takeover">
+        <figcaption>The student rolls out while the teacher scores each step; sustained
+          below-threshold scores trigger a bounded takeover producing a
+          deviation–diagnosis–recovery segment.</figcaption>
+      </figure>
+    </div>
+
+    <div class="method-block">
+      <h3 class="method-h">Progressive Three-Stage Training</h3>
+      <p>The pipeline forms a curriculum that progresses from dense to sparse feedback. <b>SFT</b>
+        establishes the output protocol and basic interaction.
+        <b>Step RL</b> applies step-level feedback with a hierarchy-triggered cascade reward to correct local
+        errors. <b>Agentic RL</b> optimizes whole trajectories in simulated or live environments
+        for long-horizon planning and recovery.</p>
+      <div class="train-flow">
+        <div class="train-stage"><span class="ts-num">SFT</span><span class="ts-desc">Supervised Fine-Tuning</span></div>
+        <div class="train-arrow">→</div>
+        <div class="train-stage"><span class="ts-num">Step RL</span><span class="ts-desc">Step-Level RL</span></div>
+        <div class="train-arrow">→</div>
+        <div class="train-stage"><span class="ts-num">Agentic RL</span><span class="ts-desc">Trajectory-Level RL</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo/xiaomi_logo.png?v=3" alt="Xiaomi logo">
+      <div>
+        <strong>Xiaomi-GUI-Show</strong>
+        <span>Interactive Showcase</span>
+      </div>
+    </div>
+    <p class="footer-note">Interface automation, viewed as a sequence of clear decisions.</p>
+    <div class="footer-line" aria-hidden="true"></div>
+    <p class="footer-fine">Local presentation · Demos · Cases · Benchmark · Results</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="script.js?v=6"></script>
+<div class="cursor-orbit" id="cursorOrbit" aria-hidden="true"><span></span></div>
+</body>
+</html>
