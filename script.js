@@ -66,6 +66,38 @@ document.querySelectorAll('#navlinks a').forEach(a=>{
   a.addEventListener('click', ()=>document.getElementById('navlinks').classList.remove('open'));
 });
 
+  const heroParticles = document.getElementById('heroParticles');
+  if(heroParticles){
+    for(let i=0;i<16;i++){
+      const particle = document.createElement('span');
+      particle.className = 'hero-particle';
+      particle.style.left = `${8 + ((i * 37) % 84)}%`;
+      particle.style.top = `${8 + ((i * 23) % 34)}%`;
+      particle.style.animationDelay = `${(i % 8) * -0.8}s`;
+      particle.style.animationDuration = `${6 + (i % 4)}s`;
+      heroParticles.appendChild(particle);
+    }
+  }
+
+  const navSectionLinks = Array.from(document.querySelectorAll('#navlinks a[href^="#"]'));
+  const navSections = navSectionLinks
+    .map(link=>document.getElementById(link.getAttribute('href').slice(1)))
+    .filter(Boolean);
+  if(navSections.length){
+    const navObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        navSectionLinks.forEach(link=>{
+          const active = link.getAttribute('href') === `#${entry.target.id}`;
+          link.classList.toggle('is-active', active);
+          if(active) link.setAttribute('aria-current','page');
+          else link.removeAttribute('aria-current');
+        });
+      });
+    },{rootMargin:'-24% 0px -64% 0px',threshold:0});
+    navSections.forEach(section=>navObserver.observe(section));
+  }
+
 const cursorOrbit = document.getElementById('cursorOrbit');
 if(cursorOrbit && window.matchMedia('(pointer:fine)').matches){
   document.body.classList.add('has-custom-cursor');

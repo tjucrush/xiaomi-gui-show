@@ -98,6 +98,18 @@ a{color:var(--orange);text-decoration:none}
   background:radial-gradient(circle, rgba(255,103,0,.16), transparent 70%);
   filter:blur(30px);pointer-events:none;
 }
+  .hero::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--orange),transparent);
+    opacity:.7;animation:hero-scan 4.5s ease-in-out infinite;
+  }
+  .hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+  .hero-particle{
+    position:absolute;width:5px;height:5px;background:var(--orange);border-radius:1px;opacity:0;
+    box-shadow:0 0 14px rgba(255,103,0,.55);animation:particle-drift 7s linear infinite;
+  }
+  .hero-particle:nth-child(3n){width:3px;height:12px;border-radius:999px}
+  .hero-particle:nth-child(4n){width:8px;height:2px;border-radius:999px}
+.nav-links a.is-active{background:var(--orange-soft);color:var(--orange-dark);box-shadow:inset 0 -2px 0 var(--orange)}
 .hero-inner{position:relative;text-align:center}
 .hero-title{
   font-size:clamp(2.6rem,6vw,4.6rem);font-weight:900;line-height:1.02;
@@ -320,6 +332,11 @@ a{color:var(--orange);text-decoration:none}
 .demo-slide:last-child{
   border-bottom:0;
 }
+  .demo-slide:not(:last-child)::after{
+    content:"↓";display:flex;align-items:center;justify-content:center;width:34px;height:34px;
+    margin:-17px auto;background:var(--orange);color:#fff;border:5px solid var(--bg-alt);
+    border-radius:50%;font-size:1.05rem;font-weight:900;line-height:1;position:relative;z-index:2;
+  }
 .demo-video{
   position:relative;
   width:100%;
@@ -452,3 +469,12 @@ a{color:var(--orange);text-decoration:none}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}}
 @media (pointer:coarse){.cursor-orbit{display:none}}
+@media (pointer:coarse){.hero-particles{display:none}}
+@media(prefers-reduced-motion:reduce){.hero-particles,.hero::after{display:none}}
+@keyframes particle-drift{
+  0%{opacity:0;transform:translate3d(0,-24px) rotate(0deg)}
+  12%{opacity:.5}
+  78%{opacity:.24}
+  100%{opacity:0;transform:translate3d(36px,380px) rotate(160deg)}
+}
+@keyframes hero-scan{0%,100%{transform:scaleX(.35);opacity:.15}50%{transform:scaleX(1);opacity:.75}}
