@@ -2,6 +2,9 @@
 
 本地静态展示页面，包含介绍、视频演示、评测图表、方法架构和案例展示。
 
+- GitHub 仓库：https://github.com/tjucrush/xiaomi-gui-show
+- 在线网站：https://tjucrush.github.io/xiaomi-gui-show/
+
 ## 文件结构
 
 ```text
